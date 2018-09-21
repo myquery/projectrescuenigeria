@@ -1,0 +1,84 @@
+.flex-container{
+    width: 100%;
+    height:100vh;
+
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('../../assets/images/moneybasic.jpg');
+    background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url('../../assets/images/moneybasic.jpg');
+    background: -o-linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)) , url('../../assets/images/moneybasic.jpg');
+    background: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url('../../assets/images/moneybasic.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+
+
+.container-fluid{
+    background: #f3f3f3!important;
+    height: 100vh !important
+}
+
+.loginForm{
+    margin: 0 auto !important;
+    position: relative;
+    margin: 0 auto !important;
+    top: 30% !important;
+    padding:  2% 5% !important;
+    width: 40%;
+    background: #fff; 
+    border-radius: 4px;
+
+}
+
+.loginForm:not(input){
+    opacity: 0.8
+}
+
+
+.ul-list{
+    display: inline;
+    position: relative;
+    right: 5% !important;
+    margin-left: 1.5%; 
+}
+
+.ul-list li{
+    list-style: none
+}
+
+.ul-list li a{
+    color: #fff;
+    font-size: 2rem;
+}
+
+button{
+    width: 100%;
+    opacity: 1;
+    background-color: yellowgreen;
+    border: 1px solid yellowgreen;
+}
+
+button:hover{
+    
+    background-color: green;
+    border: 1px solid green;
+}
+
+.admin-text{
+    text-align: center;
+    padding: 10px !important;
+    border-bottom: 1px solid #ccc
+}
+@media(max-width: 600px){
+    .loginForm{
+        
+        width: 80%;
+    
+    }  
+    
+    .ul-list li a{
+        color: #fff;
+        font-size: 1.2rem;
+    }
+}

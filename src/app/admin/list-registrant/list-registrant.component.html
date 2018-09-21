@@ -1,0 +1,94 @@
+<div class="modal-backdrop fade in" [style.display]="showModal ? 'block' : 'none'"></div>
+<div class="modal" tabindex="-1" role="dialog" style="display: block" [style.display]="showModal ? 'block' : 'none'">
+   <div class="modal-dialog">
+   <div class="mail">
+     <p><strong>Send a Direct Mail to {{mailName}}</strong>
+     <span class="pull-right"><button class="btn btn-default btn-sm btn-close" (click)="hide()">X</button></span>
+    </p></div>
+      <hr>
+      <div class="modal-popup">
+       
+        <div class="popup-title">
+          <form [formGroup]="mailForm">
+        
+            <div class="form-group">
+              <label for="mailSubject">Subject</label>
+              <input type="text" class="form-control" id="mailSubject" formControName="mailSubject" placeholder="Mail Subject">
+            </div>
+            <div class="form-group">
+              <label for="mailBody">Compose Email</label>
+              <textarea type="text" class="form-control" id="mailBody" formControlName="mailBody" placeholder="Mail Body"></textarea>
+            </div>
+         
+           
+            <button type="submit" class="btn btn-primary btn-submit"> Send Mail</button>
+          </form>
+        </div>
+      <ng-content></ng-content>
+    </div>
+</div>
+</div>
+<div class="container">
+<div class="box">
+  <div class="box-header with-border reghead">
+    <h3 class="box-title">List of Registrants</h3>
+    
+      <button class="btn btn-primary small-btn pull-right" (click)="signOut()">Sign Out</button>
+      
+   
+    <!-- /.box-tools -->
+  </div>
+  <ng2-slim-loading-bar [color]="'yellowgreen'" ></ng2-slim-loading-bar>
+  <!-- /.box-header -->
+  <ul class="list-group">
+    <li class="list-group-item">
+      Ibe Stanley
+      <br/><button class="btn btn-warning btn-sm" (click)="show()"><i  class="fa fa-envelope"> Send Mail</i> </button>
+         
+        <span class="badge">
+          <a href="#">
+            <i  class="fa fa-phone"> Make Call</i>
+          </a>
+        </span>
+        <span class="badge">
+          <a href="#">
+            <i  class="fa fa-comments"> Send SMS</i>
+          </a>
+        </span>
+      
+      
+    </li>
+    
+  </ul>
+  <ul class="list-group">
+    <li  *ngFor="let list of registeredMembers; let idx = index" class="list-group-item">
+      {{list.firstname}} {{list.othername}}  {{list.surname}}
+      <br/><button class="btn btn-warning btn-sm" (click)="show(list.$key)" [id]="idx"><i  class="fa fa-envelope"> Send Mail</i> </button>
+         
+        <span class="badge">
+          <a [href] ="'tel:+234' + list.phone">
+            <i  class="fa fa-phone"> Make Call</i>
+          </a>
+        </span>
+        <span class="badge">
+          <a [href] ="'sms:+234' + list.phone">
+            <i  class="fa fa-comments"> Send SMS</i>
+          </a>
+        </span>
+      
+      
+    </li>
+    
+  </ul>
+  <!-- /.box-body -->
+ 
+  <!-- box-footer -->
+</div>
+
+
+</div>
+ <div class="box-footer">
+   <div class="footer-tex">&#169;Copyright: Money Basic Inc. All Right Reserved </div>
+    
+  </div>
+ 

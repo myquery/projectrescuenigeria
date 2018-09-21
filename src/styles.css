@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/font-awesome/css/font-awesome.css";
+body{
+    padding:0;
+    margin:0;
+    width: 100%;
+    height:auto;
+    background-color: #fff
+
+    /* background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('assets/images/project-rescue-nigeria.jpg');
+    background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url('assets/images/project-rescue-nigeria.jpg');
+    background: -o-linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)) , url('assets/images/project-rescue-nigeria.jpg');
+    background: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url('assets/images/project-rescue-nigeria.jpg');
+    background-size: cover;
+    
+    background-attachment: fixed; */
+}
+
+input.ng-invalid.ng-dirty{
+    border: 1px solid #f00;
+    box-shadow: 0px 0px 3px rgb(253, 93, 93) !important;
+
+}
+input{
+    box-shadow: none !important;
+    border: 1px solid rgb(211, 205, 205) !important;
+}
+/* p,a,h1,h2,h3,div,span{
+    font-family: Arial, Helvetica, sans-serif !important;
+} */

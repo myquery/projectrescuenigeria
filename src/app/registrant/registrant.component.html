@@ -1,0 +1,185 @@
+<div class="flex-container ">
+  
+  
+    <div class="container-header">
+      <h1 class="text-logo">
+       <a routerLink="/">
+    <img src="../../assets/images/project-rescue-nigeria-logo.png" class="logo">
+       </a>
+      </h1>
+       <span class="txt-social hidden-xs">Connect with Us</span>
+       <ul class="list-inline">
+           <li><a href="http://facebook.com/projectrescuenigeria" target="_blank"><i class="fa fa-facebook"></i></a></li>
+           <li><a href="http://twitter.com/projectrescuenigeria" target="_blank"><i class="fa fa-twitter"></i></a></li>
+           <li><a href="http://youtube.com/projectrescuenigeria" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="http://instagram.com/projectrescuenigeria" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a  [routerLink]="['/adminlogin']" class="btn btn-outline btn-sm">
+              <span class="glyphicon glyphicon-menu-hamburger"></span> Login
+            </a></li>
+
+       </ul>
+       <h1 class="header_caption">Grassroot Mobilisation for Good Governance</h1>
+       <h1 class="siminar-date">The time is now for us as Nigerians to demand for accountability and equity</h1>
+  
+
+   </div>
+   
+   <div class="container-body">
+    
+     <div class="form-body" *ngIf="!surname; else registered">
+    
+         <form  class="formInput" [formGroup]="projectrescuenigeriaForm" (ngSubmit) ="addParticipant(projectrescuenigeriaForm.value, e); projectrescuenigeriaForm.reset()" >
+            <div class="header_addon">
+                <div class="header_addon_white_bkg">
+                  <ul class="list-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+          <p class="register">Membership Form</p>
+
+
+          <div class="form-group">
+            <label for="voters_reg_number">Voters registration Number</label>
+            
+              <div class="div input-group">
+                <div class="input-group-addon"><i class="fa fa-id-card"></i></div>
+              <input type="text" class="form-control" id="voters_reg_number" 
+              placeholder="Your VIN" formControlName="voters_reg_number" >
+            </div>
+              <div class="errmsg alert alert-danger" *ngIf="!projectrescuenigeriaForm.controls['voters_reg_number'].valid 
+              && projectrescuenigeriaForm.controls['voters_reg_number'].touched " > Please provide your Voters ID</div>
+           
+          </div>
+           <div class="form-group">
+               <label for="surname" >Surname</label>
+                <div class="input-group">
+                  <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                 <input type="text" class="form-control" id="surname" placeholder="Your Surname" formControlName="surname">
+                </div>
+                 <div class="errmsg alert alert-danger" *ngIf="!projectrescuenigeriaForm.controls['surname'].valid 
+                 && projectrescuenigeriaForm.controls['surname'].touched "> Please your surname is required</div>
+              
+               
+             </div>
+             <div class="form-group">
+              <label for="firstname">firstname</label>
+              <div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                <input type="text" class="form-control" id="firstname" placeholder="Your firstname" formControlName="firstname">
+             </div>
+                <div class="errmsg alert alert-danger" *ngIf="!projectrescuenigeriaForm.controls['firstname'].valid 
+                && projectrescuenigeriaForm.controls['firstname'].touched "> Please your firstname is required</div>
+              
+              
+            </div>
+
+                 <div class="form-group">
+               <label for="email" >Email</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                 <input type="email" class="form-control" name id="email" placeholder="Email Address" formControlName="email">
+                </div>
+                 <div class="errmsg alert alert-danger" *ngIf="!projectrescuenigeriaForm.controls['email'].valid 
+                 && projectrescuenigeriaForm.controls['email'].touched "> Please provide a valid email address</div>
+               
+             </div>
+             <div class="form-group">
+                 <label for="phone">Phone</label>
+                 <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                   <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone Number" formControlName="phone" >
+                   </div>
+                   <div class="errmsg alert alert-danger" *ngIf="!projectrescuenigeriaForm.controls['phone'].valid 
+                   && projectrescuenigeriaForm.controls['phone'].touched "> Please provide a valid phone number</div>
+                 
+               </div>
+
+               <div class="form-group">
+                <label for="gender">Gender</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-mars-stroke-v"></i></div>
+                  <select class="form-control" name="gender" id="gender" placeholder="Gender" formControlName="gender" >
+                      <option value=""></option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                  </div>
+                  <div class="errmsg alert alert-danger" *ngIf="!projectrescuenigeriaForm.controls['gender'].valid 
+                  && projectrescuenigeriaForm.controls['gender'].touched "> Please provide your gender</div>
+                
+              </div>
+
+
+
+              
+              <div class="form-group">
+                <label for="state">State</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-calendar-plus-o"></i></div>
+                    <select formControlName = "state" class="form-control" name="state" placeholder="State" (change) ="getStateLga($event.target.value)">
+                      <option><strong> --Select State --</strong></option>
+                      <option *ngFor="let state of allStates" [value]="state.name">{{state.name}}</option>
+                
+                    </select>
+                </div>
+                  <div class="errmsg alert alert-danger" *ngIf="!projectrescuenigeriaForm.controls['state'].valid 
+                  && projectrescuenigeriaForm.controls['state'].touched "> Please provide your State</div>
+              
+              </div>
+
+              <div class="form-group" *ngIf="isLga">
+                <label for="dob">LGA</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-calendar-plus-o"></i></div>
+                    <select formControlName = "lga" class="form-control" name="lga" placeholder="LGA">
+                      <option><strong> --Select LGA --</strong></option>
+                      <option *ngFor="let lga of stateLga" [value]="lga">{{lga}}</option>
+                
+                    </select>
+                  </div>
+
+                  <div class="errmsg alert alert-danger" *ngIf="!projectrescuenigeriaForm.controls['lga'].valid 
+                  && projectrescuenigeriaForm.controls['lga'].touched "> Please provide your LGA</div>
+               
+              </div>
+
+        
+              <div class="form-group">
+              
+                 <button type="submit" class="btn btn-primary" [disabled]="!projectrescuenigeriaForm.valid">Sign Up</button>
+              
+             </div>
+           </form>
+       </div>
+       <ng-template #registered>
+ 
+         <div class=" row interested">
+             <h4 class="fxheader">You made the right choice <strong>{{surname | uppercase}} {{firstname}}</strong> to join in the Movement</h4>
+           <div class="col-sm-12  fxlearn">
+               <p>We are committed to ensuring good governance in Nigeria by leveraging the power of the electorate to demand accountability</p>
+               <p>Project Rescue Nigeria is the platform that will enforce compliance to the electorate wills and aspiration</p>
+
+            
+           </div>
+    
+           
+   
+            
+           
+         </div>
+ 
+       </ng-template>
+ 
+       
+ </div>
+ <div class="footer-text">
+
+       </div>
+ 
+ 
+ 

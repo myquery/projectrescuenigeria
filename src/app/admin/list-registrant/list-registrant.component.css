@@ -1,0 +1,104 @@
+a{
+    color: #fff;
+
+}
+
+a:hover{
+    color: #f3f3f3;
+
+}
+
+
+.box-footer{
+    background-color: yellowgreen;
+    color: #fff;
+    width: 100% !important;
+    padding: 10px;
+
+
+}
+.footer-tex{
+    margin: 0 auto;
+    width: 85%;
+    font-size: 1.5rem;
+}
+
+.font-email{
+    font-size: 1rem
+}
+
+.reghead{
+    width:100%;
+    background-color: transparent;
+    color: #fff;
+    line-height: 40px;
+    padding: 10px;
+
+    
+}
+.small-btn {
+    margin-top: 0;
+    position: absolute;
+    right: 7%;
+    top: 3%;
+    background-color: yellowgreen !important;
+    border:none !important
+}
+
+.small-btn:hover {
+   
+    background-color: green !important;
+    border:none !important
+}
+
+.modal-dialog{
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    top: 30%;
+    padding: 10px;
+    border-radius: 5px;
+    left: 7%;
+    width: 80%;
+}
+
+.mail{
+    background: yellowgreen;
+    margin: -10px;
+    padding: 5px;
+    box-sizing: border-box;
+    color: #fff
+}
+
+.btn-close{
+position: absolute;
+right: 1%;
+background-color: yellowgreen !important;
+border:2px solid  #fff !important
+}
+
+.btn-submit{
+    
+    background-color: yellowgreen !important;
+    border:none !important
+    }
+@media(min-width: 320px) and (max-width: 500px){
+    .small-btn {
+        margin-top: 0;
+        position: absolute;
+        right: 4%;
+        top: 3%;
+        background-color: yellowgreen !important;
+        border:none !important
+    } 
+    
+    .small-btn:hover {
+         background-color: green !important;
+         border:none !important
+     }
+
+     .footer-tex{
+       
+        font-size: 1.2rem;
+    }
+}

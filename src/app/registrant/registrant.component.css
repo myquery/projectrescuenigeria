@@ -1,0 +1,509 @@
+.flex-container{
+    width: 100%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+   
+    
+}
+
+a{
+    color: #fff
+}
+a:hover{
+    color: yellowgreen
+}
+
+.logo{
+  width: 80%;
+}
+.header_caption{
+    font-size: 5rem;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center !important;
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    margin: auto 0;
+
+    
+
+}
+.header_caption_register{
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    position: relative;
+    top: 55%;
+    margin: 0 auto;
+
+    
+
+}
+
+.container-header{
+    flex: 1 0 60%;
+      
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('../../assets/images/project-rescue-nigeria.jpg');
+    background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url('../../assets/images/project-rescue-nigeria.jpg');
+    background: -o-linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)) , url('../../assets/images/project-rescue-nigeria.jpg');
+    background: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url('../../assets/images/project-rescue-nigeria.jpg');
+    background-size: cover;
+    position: relative
+   
+    
+}
+.header_addon{
+    height: 10%;
+    width: 80%;
+    position: absolute;
+    top: 0%;
+  
+     
+}
+.header_addon_white_bkg{
+    background-color: #fff;
+    color: #fff;
+    margin: 0 auto;
+    width: 90%;
+  
+    bottom: 0%;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+  
+
+ 
+}
+.container-body{
+    flex: 0 1 auto;
+   
+  }
+
+.formInput{
+    width: 70%;
+    border-radius:  5px  5px 5px 5px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding:20px 80px;
+    position: relative;
+    height: auto;
+    box-shadow:  0px 2px 2px  #333;
+    top: -50px
+
+    
+}
+
+.formInput:not(input){
+    opacity: 0.9;
+}
+.formInput{
+   
+    margin-top: 0px;
+    margin-bottom:5%;
+}
+button{
+    width: 100%;
+    opacity: 1;
+    background-color: yellowgreen;
+    border: 1px solid yellowgreen;
+}
+
+button:hover{
+    
+    background-color: green;
+    border: 1px solid green;
+}
+.list-inline{
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    list-style:none;
+    display:inline-block
+}
+.list-inline li {
+    justify-content: flex-end
+}
+.list-inline li a{
+    color:white
+    }
+    .list-inline li a:hover{
+        color:#158383
+    }
+
+    .list-menu{
+        font-size: 1.5rem;
+        color: 333;
+        list-style:none;
+      
+        margin-right: auto;
+        margin-left:  auto;
+        text-align: center
+        /* padding-left: 0px !important */
+        
+    
+       
+    }
+    .list-menu li {
+        justify-content: flex-end;
+        display:inline-block;
+        width: 15%;
+        padding-top: 10px;
+        text-align: center;
+        
+    }
+    .list-menu li a{
+        color:333
+        }
+        .list-menu li a:hover{
+            color:#158383;
+            text-decoration: none;
+            width: 15%;
+         
+          
+         
+           
+        }
+    
+
+    .txt-social{
+        position:absolute;
+        font-size:10px;
+        color:#fff !important;
+        top: 2%;
+        right:6%;
+        font-weight:bolder
+    }
+    .errmsg{
+        margin: 5px 0px !important;
+        animation: 1s animErr forwards;
+        height: auto !important;
+        padding: 10px !important;
+    }
+    @keyframes animErr{
+        from{
+            opacity: 0;
+           transform: translateY(-20px) 
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px)
+        }
+    }
+   .text-logo{
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       font-size: 3rem;
+       font-weight: bolder;
+       float: left;
+       margin-left: 5%;
+       line-height: 55px;
+       
+   }
+   .text-color{
+    color: greenyellow
+   }
+   .siminar-date{
+   
+       color: #fff;
+       padding: 10px;
+       line-height: 20px;
+       font-weight: bolder;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       text-align: center;
+       font-size: 2rem;
+       width: 40%;
+       margin: 0 auto;
+       position: relative;
+       top: 60%
+      
+
+
+   }
+   .register{
+  
+       color: #333;
+       text-align: center;
+       line-height: 20px;
+       font-size: 2rem;
+       margin-top: 7%;
+       padding: 10px;
+       background-color: yellowgreen;
+ 
+       width:50%;
+       text-align: center;
+       border-radius: 5px;
+       margin-right: auto;
+       margin-left: auto;
+
+   }
+   .register:before{
+       content:"-- "
+   }
+   .register:after{
+    content:" --"
+}
+
+
+.footer-text{
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 2%;
+    background-color: green
+
+}
+.interested{
+    width: 70%;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding:10px;
+    position: relative;
+    margin-top:3%;
+    font-size: 2rem;
+    opacity: .9
+}
+.fxlearn{
+    background-color:#fff;
+    height:auto;
+    color: #333;
+    padding: 10px;
+    font-size: 1.5rem;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0px 2px 1px #333;
+    text-align: center;
+    border-radius:  0  0 5px 5px;
+}
+
+/* .fxlearn2{
+    background-color:#b5e20f;
+    height: 300px;
+    padding: 10px;
+    font-size: 1.5rem;
+} */
+.fxheader{
+    text-align: center
+}
+
+@media(min-width : 320px) and (max-width : 480px) {
+
+    .register{
+   
+             font-size: 1.5rem;
+             margin-top: 15%;
+             width:60%;
+         
+      
+         }
+
+    .logo{
+        width: 60%;
+      }
+
+     
+    .list-inline li a{
+        padding: 2px !important;
+        }
+
+        .header_addon{
+       
+            width: 90%;
+      
+          
+             
+        }
+
+        .header_addon_white_bkg{
+         
+            color: #fff;
+            margin: 0 auto;
+            width: 100%;
+          
+            bottom: 0%;
+            border-radius: 10px 10px 0 0;
+            position: relative;
+          
+        
+         
+        }
+
+    .list-menu{
+        font-size: 1.1rem;
+        width: 100%;
+  
+        margin-right: auto;
+        margin-left:  auto;
+        text-align: left;
+        padding: 0px 5px
+        
+    }
+    .list-menu li{
+        width: 13%;
+        margin: 0px 3px !important;
+    }
+
+    .list-menu li a{
+        width: 13%;
+      
+    }
+
+
+    .list-menu li a:hover{
+        color:#158383;
+        text-decoration: none;
+  
+      
+       
+    }
+
+    
+
+    .formInput{
+        width: 80%;
+        padding: 1px 20px;
+       
+    }
+    .formInput input{
+        width: 100%;
+        padding: 10px !important;
+       
+    }
+
+    .siminar-date{
+    
+        font-size: 1.5rem;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        top: 40%;
+          
+     
+    }
+
+    .register{
+    
+       font-size: 1.3rem;
+       padding: 5px;
+       margin-top: 25%;
+       box-shadow: 0px 1px 1px rgb(172, 167, 167);
+       width: 100%;
+     
+      
+
+   }
+
+    .text-logo{
+      
+        font-size: 1.2rem;
+        font-weight: bolder;
+        float: left;
+        margin-left: 5%;
+        line-height: 55px;
+        
+    }
+
+    .txt-social{
+   
+        right:2%;
+   
+    }
+
+    .list-inline{
+        top:2%;
+        right: 2%;
+        font-size: 10px;
+         }
+    h1{
+       font-size: 2.3rem;
+       }
+
+       
+
+    .fxlearn{
+    
+        font-size: 1.1rem;
+        height:auto;
+    }
+    
+    .fxlearn2{
+     
+        font-size: 1.1rem;
+        height:auto;
+    }
+    .fxheader{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+
+    
+    .footer-text{
+       background-color: yellowgreen;
+       width: 100% !important;   
+       padding-bottom: 15px;
+       margin-top: 10px !important;
+    
+    }
+
+    .header_caption{
+        font-size: 3rem;
+        color: #fff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        position: absolute;
+        top: 35%;
+        left: 12%;
+        margin: auto 0;
+    
+        
+    
+    }
+}
+
+@media(min-width : 768px) and (max-width : 1024px) {
+    .logo{
+        width: 90%;
+      }
+
+      .header_addon{
+        height: 7%;
+     
+    }
+    .siminar-date{
+        
+            font-size: 2.5rem;
+            margin: 0 auto;
+            position: relative;
+            top: 60%;
+            text-align: center !important;
+            line-height: 20px;
+            width: 80%;
+              
+         
+        }
+        .formInput{
+            width: 75%;
+        
+            padding:20px 40px;
+          
+        }
+
+        .header_addon_white_bkg{
+        
+            width: 75%;
+          
+         
+        }
+}    
+
+
+
