@@ -23,7 +23,14 @@ import {AdminModule} from './admin/admin.module';
 import {AuthGuardService} from './auth-guard.service';
 import {MemberService} from './member-service.service';
 
-import {environment } from '../environments/environment'
+export const firebaseConfig = {
+    apiKey: "AIzaSyCGjhUlkF188zxeq0GDTh0IkJC-9PdF35k",
+    authDomain: "projectrescuenigeria-a62cb.firebaseapp.com",
+    databaseURL: "https://projectrescuenigeria-a62cb.firebaseio.com",
+    projectId: "projectrescuenigeria-a62cb",
+    storageBucket: "projectrescuenigeria-a62cb.appspot.com",
+    messagingSenderId: "997450733685"
+  };
 
 @NgModule({
   declarations: [
@@ -35,7 +42,7 @@ import {environment } from '../environments/environment'
     BrowserModule,
     ReactiveFormsModule,
     AngularFontAwesomeModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     HttpModule,
