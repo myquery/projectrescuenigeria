@@ -21,9 +21,9 @@ export class AdminloginComponent implements OnInit {
   errMsg: string
   
 
-  constructor(private fb : FormBuilder, private router : Router) {
+  constructor(private fb : FormBuilder, private router : Router, private use: userList) {
   
-    userList.map(users => {
+    usr.map(users => {
       this.username = users.username;
       this.password = users.password;
     })
